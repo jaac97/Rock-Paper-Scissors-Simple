@@ -31,10 +31,14 @@ function startGame(player, computer) {
 }
 
 function playRound () {
-    let game = prompt("Choose Paper, Scissor or Rock, if you want to stop press cancel")
+    console.log("click")
+/*     let game = prompt("Choose Paper, Scissor or Rock, if you want to stop press cancel")
     while(game !== null){
         startGame(game, getComputerChoice());
         game = prompt("Choose Paper, Scissor or Rock, if you want to stop press cancel")
-    }
+    } */
 }
-playRound()
+const btns = document.querySelectorAll('button');
+btns.forEach(btn => {
+    btn.addEventListener('click', playRound)
+})
